@@ -1,0 +1,2 @@
+---
+zabbix::agent::conf_file:       /etc/zabbix/zabbix_agentd.conf

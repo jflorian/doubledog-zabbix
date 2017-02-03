@@ -1,0 +1,9 @@
+---
+zabbix::agent::enable:          true
+zabbix::agent::ensure:          running
+zabbix::agent::listen_port:     10050
+zabbix::agent::manage_firewall: true
+zabbix::agent::packages:
+    - zabbix-agent
+zabbix::agent::services:
+    - zabbix-agent
