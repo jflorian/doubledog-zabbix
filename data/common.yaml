@@ -1,4 +1,5 @@
 ---
+### Agent
 zabbix::agent::enable:          true
 zabbix::agent::ensure:          running
 zabbix::agent::listen_port:     10050
@@ -7,3 +8,17 @@ zabbix::agent::packages:
     - zabbix-agent
 zabbix::agent::services:
     - zabbix-agent
+
+### Server
+zabbix::server::db_host:            localhost
+zabbix::server::db_name:            zabbix
+zabbix::server::db_user:            zabbix
+zabbix::server::enable:             true
+zabbix::server::ensure:             running
+zabbix::server::listen_port:        10051
+zabbix::server::manage_firewall:    true
+zabbix::server::packages:
+    - zabbix-server-pgsql
+    - zabbix-web-pgsql
+zabbix::server::services:
+    - zabbix-server

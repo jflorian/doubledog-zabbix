@@ -1,2 +1,4 @@
 ---
 zabbix::agent::conf_file:       /etc/zabbix_agentd.conf
+
+zabbix::server::conf_file:      /etc/zabbix_server.conf
