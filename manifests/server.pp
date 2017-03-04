@@ -60,7 +60,8 @@ class zabbix::server (
             subscribe => Package[$::zabbix::server::packages],
             ;
         $conf_file:
-            content => template('zabbix/zabbix_server.conf.erb'),
+            content   => template('zabbix/zabbix_server.conf.erb'),
+            show_diff => false,
             ;
     }
 
