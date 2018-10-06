@@ -1,4 +1,3 @@
-# git_modules/zabbix/manifests/server.pp
 #
 # == Class: zabbix::server
 #
@@ -24,22 +23,24 @@
 #
 # === Copyright
 #
-# Copyright 2017 John Florian
+# This file is part of the doubledog-zabbix Puppet module.
+# Copyright 2017-2018 John Florian
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 
 class zabbix::server (
-        String $conf_file,
-        String $db_host,
-        String $db_name,
-        String $db_user,
-        String $db_passwd,
-        Boolean $enable,
-        Variant[Boolean, Enum['running', 'stopped']] $ensure,
-        Boolean $manage_firewall,
-        Array[String] $packages,
-        Integer[1,65535] $listen_port,
-        Array[String] $services,
-        String $timezone,
+        String                  $conf_file,
+        String                  $db_host,
+        String                  $db_name,
+        String                  $db_user,
+        String                  $db_passwd,
+        Boolean                 $enable,
+        Ddolib::Service::Ensure $ensure,
+        Boolean                 $manage_firewall,
+        Array[String]           $packages,
+        Integer[1,65535]        $listen_port,
+        Array[String]           $services,
+        String                  $timezone,
     ) {
 
     package { $::zabbix::server::packages:
