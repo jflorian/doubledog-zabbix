@@ -22,6 +22,7 @@ All notable changes to this project (since v0.1.0) will be documented in this fi
 ## [1.2.0] WIP
 ### Added
 - Fedora 30-31 support
+- CentOS 8 support
 ### Changed
 - dependency on `puppetlabs/firewall` now allows version 2
 ### Deprecated
